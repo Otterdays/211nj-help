@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>211 NJ Help — Sicklerville 08081</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f8f9fa;
+    --header-bg: #eaecf0;
+    --border: #a2a9b1;
+    --border-light: #eaecf0;
+    --text: #202122;
+    --muted: #54595d;
+    --link: #0645ad;
+    --link-visited: #0b0080;
+    --accent: #36c; /* reserved for alert accents only */
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    padding: 1.25rem 1.5rem 3rem;
+    max-width: 1360px;
+    margin: 0 auto;
+  }
+
+  /* Links */
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:visited { color: var(--link-visited); }
+
+  /* Title */
+  h1 {
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.35rem;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin: 0.5rem 0 1.25rem;
+  }
+
+  /* Two-column layout: sticky contents + content */
+  .layout {
+    display: flex;
+    gap: 1.75rem;
+    align-items: flex-start;
+  }
+  .content { flex: 1 1 auto; min-width: 0; }
+
+  /* Table of contents (sticky sidebar) */
+  .toc {
+    flex: 0 0 205px;
+    width: 205px;
+    position: sticky;
+    top: 1rem;
+    align-self: flex-start;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 0.5rem 0.7rem;
+    font-size: 0.79rem;
+  }
+  .toc-title {
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .toc ol { list-style: none; counter-reset: toc; }
+  .toc li {
+    counter-increment: toc;
+    padding: 0.08rem 0;
+    line-height: 1.3;
+  }
+  .toc li::before {
+    content: counter(toc) ". ";
+    color: var(--muted);
+  }
+
+  /* Section headings */
+  .section-title {
+    font-family: 'Linux Libertine', 'Georgia', 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin: 1.9rem 0 0.6rem;
+    padding-bottom: 0.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Panels (like infoboxes) */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: start;
+    margin-bottom: 0.5rem;
+  }
+  .panel {
+    background: var(--bg);
+    border: 1px solid var(--border);
+  }
+  .panel-head {
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    padding: 0.35rem 0.6rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .panel-body { padding: 0.65rem 0.75rem; }
+
+  /* Lists */
+  .panel ul { list-style: none; margin: 0; }
+  .panel li {
+    padding: 0.25rem 0 0.25rem 1rem;
+    position: relative;
+    font-size: 0.875rem;
+    color: var(--text);
+  }
+  .panel li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--muted);
+  }
+  .panel p { font-size: 0.875rem; margin-bottom: 0.5rem; color: var(--text); }
+
+  /* Tags (replaces colorful badges) */
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.1rem 0.35rem;
+    margin-left: 0.2rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    background: var(--surface);
+    color: var(--muted);
+    vertical-align: middle;
+  }
+
+  /* Contact rows */
+  .contact-row {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 0.85rem;
+  }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-row .name { color: var(--text); font-weight: 600; min-width: 165px; }
+  .contact-row .num { font-weight: 600; }
+  .contact-row .desc { color: var(--muted); font-size: 0.78rem; margin-left: auto; text-align: right; }
+
+  /* Tables */
+  .income-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+  .income-table th, .income-table td {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--border);
+    text-align: left;
+  }
+  .income-table th {
+    background: var(--header-bg);
+    font-weight: 700;
+    font-size: 0.78rem;
+  }
+
+  /* Quickstart list */
+  .quickstart {
+    border: 1px solid var(--border);
+    background: var(--surface);
+    padding: 0.75rem 1rem 0.75rem 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .quickstart ol { list-style: decimal; }
+  .quickstart li { padding: 0.3rem 0; font-size: 0.9rem; }
+
+  /* Alert / notice */
+  .alert-box {
+    background: #fef6e7;
+    border: 1px solid var(--border);
+    border-left: 4px solid #b32424;
+    padding: 0.85rem 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  .alert-box a { text-decoration: underline; }
+
+  .footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 2.25rem;
+    border-top: 1px solid var(--border-light);
+    padding-top: 0.75rem;
+  }
+
+  @media (max-width: 820px) {
+    .layout { flex-direction: column; }
+    .toc { position: static; width: auto; flex-basis: auto; max-height: none; margin-bottom: 1.25rem; }
+  }
+
+  @media print {
+    body { background: #fff; color: #000; padding: 1rem; font-size: 0.8rem; }
+    .layout { display: block; }
+    .toc { position: static; width: auto; max-height: none; }
+    a { color: #000; text-decoration: none; }
+    .panel, .quickstart, .toc, .alert-box { break-inside: avoid; background: #fff; }
+    .panel-head { background: #eee; }
+    .tag { background: #fff; }
+    .alert-box { background: #fff; }
+    h1, .section-title { border-bottom-color: #999; }
+  }
+</style>
+</head>
+<body>
+
+<h1>211 NJ Help — Sicklerville / 08081</h1>
+<p class="subtitle">Winslow Township, Camden County &middot; Updated 10/07/2026 &middot; Ryan, fiancée (autism/anxiety), child (Asperger's)</p>
+
+<div class="layout">
+<!-- CONTENTS -->
+<nav class="toc">
+  <div class="toc-title">Contents</div>
+  <ol>
+    <li><a href="#quickstart">Quickstart checklist</a></li>
+    <li><a href="#utilities">Utility bill assistance</a></li>
+    <li><a href="#income">Income eligibility</a></li>
+    <li><a href="#food-health">Food &amp; health insurance</a></li>
+    <li><a href="#cash">Cash assistance &amp; disability income</a></li>
+    <li><a href="#medical">Medical bills, prescriptions &amp; mental health</a></li>
+    <li><a href="#disability">Disability &amp; developmental services</a></li>
+    <li><a href="#childcare">Child care &amp; school support</a></li>
+    <li><a href="#marriage">The marriage question</a></li>
+    <li><a href="#housing">Housing, rent &amp; legal help</a></li>
+    <li><a href="#local">Local &amp; county</a></li>
+    <li><a href="#home-repair">Home repair &amp; improvement</a></li>
+    <li><a href="#energy">Weatherization &amp; energy efficiency</a></li>
+    <li><a href="#transportation">Transportation</a></li>
+    <li><a href="#food-pantries">Food pantries &amp; free meals</a></li>
+    <li><a href="#employment">Employment &amp; job training</a></li>
+    <li><a href="#more">Tax relief, internet &amp; more</a></li>
+    <li><a href="#phones">Phone number cheat sheet</a></li>
+  </ol>
+</nav>
+
+<main class="content">
+<!-- QUICKSTART CHECKLIST -->
+<h2 class="section-title" id="quickstart">Quickstart checklist</h2>
+<div class="quickstart">
+  <ol>
+    <li><strong>Call 211</strong> for a full benefits screening (all programs at once) &mdash; <strong>211</strong> or <a href="tel:800-510-3102">800-510-3102</a> &middot; <a href="https://nj211.org" target="_blank">nj211.org</a></li>
+    <li><strong>Apply for USF / LIHEAP / LIHWAP</strong> &mdash; one application, three programs &mdash; <a href="https://energyassistance.nj.gov">energyassistance.nj.gov</a> or call 211</li>
+    <li><strong>Apply for NJ FamilyCare</strong> &mdash; health insurance for all 3 of you &mdash; <a href="https://njfamilycare.dhs.state.nj.us">njfamilycare.dhs.state.nj.us</a></li>
+    <li><strong>Call SHARES</strong> &mdash; H2O water grant ($500) + emergency utility grants &mdash; <a href="tel:866-657-4273">866-657-4273</a> &middot; <a href="https://sharesnation.org">sharesnation.org</a></li>
+    <li><strong>Call DDD</strong> &mdash; get fiancée evaluated for Supports Program &mdash; <a href="tel:609-633-1482">609-633-1482</a> &middot; <a href="https://nj.gov/humanservices/ddd">nj.gov/humanservices/ddd</a></li>
+    <li><strong>Apply for cash &amp; child care</strong> &mdash; one app covers SNAP, WFNJ cash aid &amp; child care &mdash; <a href="https://www.njhelps.gov">njhelps.gov</a> or call 211</li>
+    <li><strong>Get free tax help</strong> &mdash; claim EITC / Child Tax Credit with free VITA prep &mdash; <a href="https://www.nj.gov/treasury/taxation/freefiling/">nj.gov/freefiling</a></li>
+  </ol>
+</div>
+
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Gather these first <span class="tag">do this before any application</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Photo ID</strong> + <strong>Social Security numbers</strong> for every person who applies</li>
+        <li><strong>Proof of income</strong> &mdash; recent pay stubs and last 2 years of tax returns</li>
+        <li>Your <strong>deed or lease</strong> + a recent utility bill (proof of address in 08081)</li>
+        <li><strong>Medical / disability records</strong> &mdash; autism &amp; Asperger&rsquo;s diagnoses, your back treatment, medication list</li>
+        <li><strong>Birth certificates</strong> and the child&rsquo;s school / IEP documents</li>
+        <li>Recent <strong>bank statements</strong> &mdash; a few programs (SSI, Charity Care) check assets</li>
+      </ul>
+      <p>Keep copies in one folder &mdash; the same documents unlock almost every program below.</p>
+    </div>
+  </div>
+</div>
+
+<!-- UTILITY ASSISTANCE -->
+<h2 class="section-title" id="utilities">Utility bill assistance</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Atlantic City Electric <span class="tag">ACE</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Budget Billing</strong> — even payments over 12 months, no seasonal spikes</li>
+        <li><strong>Extended Due Date</strong> — push your due date, no late charge</li>
+        <li><strong>Payment Arrangements</strong> — monthly installments on past-due balance</li>
+        <li><strong>Third-Party Notification</strong> — designate someone to get disconnect notices</li>
+        <li><strong>Customer Relief Fund</strong> — ACE&rsquo;s <em>own</em> one-time grant up to <strong>$500</strong> for eligible customers <span class="tag">Exelon Promise</span></li>
+        <li><strong>SHARES emergency assistance</strong> — a <em>separate</em> grant for customers behind on their bill, applied through SHARES <span class="tag">SHARES</span></li>
+        <li><strong>Single Stop</strong> — ACE&rsquo;s free, confidential benefits screener; checks in ~15 minutes for help with utilities <em>and</em> food, housing, healthcare, childcare, school &amp; taxes <span class="tag">all benefits</span></li>
+      </ul>
+      <div class="contact-row"><span class="name">ACE Customer Service</span><span class="num"><a href="tel:800-642-3780">800-642-3780</a></span><span class="desc">Mon-Fri 8-8</span></div>
+      <div class="contact-row"><span class="name">ACE Customer Relief Fund</span><span class="num"><a href="tel:800-642-3780">800-642-3780</a></span><span class="desc">apply via ACE</span></div>
+      <div class="contact-row"><span class="name">SHARES emergency grants</span><span class="num"><a href="tel:866-657-4273">866-657-4273</a></span><span class="desc">sharesnation.org</span></div>
+      <div class="contact-row"><span class="name">Single Stop screener</span><span class="num"><a href="https://app.singlestop.org" target="_blank">app.singlestop.org</a></span><span class="desc">free, 24/7</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJ American Water <span class="tag">NJAM</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>H2O Grants</strong> — up to <strong>$500</strong> once every 3 years <span class="tag">≤300% FPL</span></li>
+        <li><strong>Affordability Discount</strong> — 15-60% off fixed + volumetric charges <span class="tag">tiered</span></li>
+        <li><strong>Budget Billing</strong> — free, call before due date</li>
+        <li><strong>Auto-eligible</strong> if on SNAP, Medicaid, LIHEAP, USF, SSI, Lifeline, TANF</li>
+      </ul>
+      <div class="contact-row"><span class="name">NJAM Service</span><span class="num"><a href="tel:1-800-272-1325">1-800-272-1325</a></span><span class="desc">Mon-Fri 7-7</span></div>
+      <div class="contact-row"><span class="name">H2O Grants (SHARES)</span><span class="num"><a href="tel:877-652-9426">877-652-9426</a></span><span class="desc">NJAWH2O</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">USF / LIHEAP / LIHWAP</div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>USF</strong> — monthly credit on gas/electric ($5-$200/mo) <span class="tag">year-round</span></li>
+        <li><strong>LIHEAP</strong> — annual credit for heating &amp; cooling <span class="tag">Oct-Jun</span></li>
+        <li><strong>Fresh Start</strong> — auto debt forgiveness after 12 on-time payments <span class="tag">auto-enroll</span></li>
+        <li><strong>LIHWAP</strong> — water bill help, prevents shutoffs, pays reconnection</li>
+        <li><strong>One application</strong> covers all three</li>
+      </ul>
+      <div class="contact-row"><span class="name">HEA Hotline</span><span class="num"><a href="tel:800-510-3102">800-510-3102</a></span><span class="desc">Mon-Fri 8-8</span></div>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://energyassistance.nj.gov">energyassistance.nj.gov</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">PAGE Program</div>
+    <div class="panel-body">
+      <ul>
+        <li>Up to <strong>$700/year</strong> for low-to-moderate income</li>
+        <li>Must apply to <strong>USF &amp; LIHEAP first</strong></li>
+        <li>Must have <strong>$100+ overdue</strong> balance on gas/electric</li>
+        <li>State-funded, first-come first-served</li>
+      </ul>
+      <div class="contact-row"><span class="name">PAGE Apply</span><span class="num"><a href="tel:855-465-8783">855-465-8783</a></span><span class="desc">or njpoweron.org/page</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- INCOME LIMITS -->
+<h2 class="section-title" id="income">Income eligibility (2025-2026)</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">USF / LIHEAP / HEA monthly limits</div>
+    <div class="panel-body">
+      <table class="income-table">
+        <tr><th>Household</th><th>Max monthly income</th></tr>
+        <tr><td>2 people</td><td>$5,449</td></tr>
+        <tr><td>3 people</td><td>$6,732</td></tr>
+        <tr><td>4 people</td><td>$8,014</td></tr>
+        <tr><td>5 people</td><td>$9,296</td></tr>
+        <tr><td>6 people</td><td>$10,578</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">SNAP gross monthly limits <span class="tag">185% FPL</span></div>
+    <div class="panel-body">
+      <table class="income-table">
+        <tr><th>Household</th><th>Max gross income</th></tr>
+        <tr><td>1 person</td><td>$2,413</td></tr>
+        <tr><td>2 people</td><td>$3,261</td></tr>
+        <tr><td>3 people</td><td>$4,109</td></tr>
+        <tr><td>4 people</td><td>$4,957</td></tr>
+        <tr><td>Min benefit</td><td>$95/mo (NJ supplement)</td></tr>
+      </table>
+      <p><strong>Tip:</strong> Medical expenses &gt;$35/mo are deductible (helps with your back treatment costs).</p>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJ FamilyCare <span class="tag">Medicaid</span></div>
+    <div class="panel-body">
+      <table class="income-table">
+        <tr><th>Category</th><th>Income limit</th></tr>
+        <tr><td>Adults 19-64</td><td>138% FPL (~$1,836/mo, 1 person)</td></tr>
+        <tr><td>Children &lt;19</td><td>355% FPL (~$9,763/mo, family of 4)</td></tr>
+        <tr><td>Pregnant women</td><td>205% FPL + 12-mo postpartum</td></tr>
+      </table>
+      <p><strong>No asset limit</strong> for most categories in NJ.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOD & HEALTH -->
+<h2 class="section-title" id="food-health">Food &amp; health insurance</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">SNAP (Food Stamps)</div>
+    <div class="panel-body">
+      <p>NJ is generous: 185% FPL, no asset limit, $95 minimum benefit, medical deductions available.</p>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://nj.gov/humanservices/njsnap/apply/">nj.gov/njsnap</a></span></div>
+      <div class="contact-row"><span class="name">Phone</span><span class="num"><a href="tel:211">211</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJ FamilyCare / Medicaid</div>
+    <div class="panel-body">
+      <p>Health insurance for your kid's Asperger's, fiancée's autism/anxiety, your back treatment. No asset test for most.</p>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://njfamilycare.dhs.state.nj.us">njfamilycare.dhs.state.nj.us</a></span></div>
+      <div class="contact-row"><span class="name">Phone</span><span class="num"><a href="tel:211">211</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CASH ASSISTANCE & DISABILITY INCOME -->
+<h2 class="section-title" id="cash">Cash assistance &amp; disability income</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Work First New Jersey <span class="tag">WFNJ</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>TANF</strong> &mdash; monthly cash for families with children, plus automatic Medicaid &amp; work supports</li>
+        <li><strong>General Assistance (GA)</strong> &mdash; cash for single adults/couples with no children who can&rsquo;t work</li>
+        <li><strong>One online application</strong> (MyNJHelps) covers SNAP, WFNJ cash <em>and</em> child care at once</li>
+        <li>Time-limited &mdash; apply through Camden County Board of Social Services</li>
+      </ul>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://www.njhelps.gov">njhelps.gov</a></span></div>
+      <div class="contact-row"><span class="name">Camden County BSS</span><span class="num"><a href="tel:856-225-8800">856-225-8800</a></span><span class="desc">SNAP/TANF/GA</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">SSI &mdash; Supplemental Security Income <span class="tag">Federal</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Monthly cash for <strong>disabled adults &amp; children</strong> with little income/resources</li>
+        <li>Your <strong>fiancée</strong> (autism) and <strong>child</strong> (Asperger&rsquo;s) may qualify; also you if your back prevents work</li>
+        <li>In NJ, SSI <strong>automatically grants Medicaid</strong></li>
+        <li>Resource limit: <strong>$2,000</strong> single / $3,000 couple (your home &amp; one car don&rsquo;t count)</li>
+        <li>See the <a href="#marriage">marriage question</a> &mdash; SSI rules change if you marry</li>
+      </ul>
+      <div class="contact-row"><span class="name">Social Security</span><span class="num"><a href="tel:1-800-772-1213">1-800-772-1213</a></span><span class="desc">Mon-Fri 8-7</span></div>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://www.ssa.gov/applyfordisability/">ssa.gov/applyfordisability</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">SSDI &mdash; Disability Insurance <span class="tag">If you worked</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>For adults who <strong>worked &amp; paid Social Security taxes</strong> and are now disabled</li>
+        <li>Often pays <strong>more than SSI</strong> if you have enough work credits</li>
+        <li><strong>Medicare</strong> starts after 24 months of benefits</li>
+        <li>NJ&rsquo;s Division of Disability Services makes the medical decision</li>
+      </ul>
+      <div class="contact-row"><span class="name">Social Security</span><span class="num"><a href="tel:1-800-772-1213">1-800-772-1213</a></span></div>
+      <div class="contact-row"><span class="name">NJ Disability Services</span><span class="num"><a href="https://www.nj.gov/labor/claims/dds/claimants.shtml">nj.gov/labor/claims/dds</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJ ABLE &mdash; save safely <span class="tag">Protects benefits</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Tax-advantaged savings account for a disability with onset <strong>before age 46</strong> (age limit rose from 26 on Jan 1, 2026)</li>
+        <li>Up to <strong>$100,000</strong> in the account does <strong>not</strong> count against SSI, and Medicaid stays intact</li>
+        <li>Pay for housing, transportation, health, education, assistive tech &amp; more</li>
+        <li>Great for your <strong>child</strong> &mdash; lets family gift money without disqualifying benefits</li>
+      </ul>
+      <div class="contact-row"><span class="name">Open an account</span><span class="num"><a href="https://savewithable.com/nj/">savewithable.com/nj</a></span></div>
+      <div class="contact-row"><span class="name">Program Info</span><span class="num"><a href="https://www.nj.gov/humanservices/dds/programs/njable/">nj.gov/humanservices/dds/njable</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MEDICAL, PRESCRIPTIONS & MENTAL HEALTH -->
+<h2 class="section-title" id="medical">Medical bills, prescriptions &amp; mental health</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Hospital Charity Care <span class="tag">NJDOH</span></div>
+    <div class="panel-body">
+      <p>Free or reduced hospital care for <strong>uninsured</strong> NJ residents not eligible for Medicaid &mdash; helps with your <strong>back treatment</strong> bills.</p>
+      <table class="income-table">
+        <tr><th>Income (% FPL)</th><th>You pay</th></tr>
+        <tr><td>200% or below</td><td>0% (free)</td></tr>
+        <tr><td>201&ndash;250%</td><td>20&ndash;40%</td></tr>
+        <tr><td>251&ndash;300%</td><td>60&ndash;80%</td></tr>
+      </table>
+      <ul>
+        <li>Asset limit: <strong>$7,500</strong> single / $15,000 family</li>
+        <li>Get screened for <strong>NJ FamilyCare / Medicaid first</strong> &mdash; Charity Care only covers what Medicaid won&rsquo;t</li>
+        <li>Apply at the hospital&rsquo;s <strong>business office</strong> within <strong>1 year</strong> of service &mdash; decision in 10 business days</li>
+      </ul>
+      <div class="contact-row"><span class="name">NJDOH Charity Care</span><span class="num"><a href="tel:1-866-588-5696">1-866-588-5696</a></span></div>
+      <div class="contact-row"><span class="name">Program Info</span><span class="num"><a href="https://www.nj.gov/health/hcf/charity-care/overview/">nj.gov/health/charity-care</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Prescription help <span class="tag">PAAD</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>PAAD</strong> &mdash; low-cost prescriptions for adults <strong>65+ or 18&ndash;64 on Social Security Disability</strong>; income limits apply</li>
+        <li><strong>NJ FamilyCare</strong> covers prescriptions free for enrolled kids &amp; adults</li>
+        <li><strong>NeedyMeds</strong> free drug discount card &mdash; no insurance needed</li>
+        <li>Ask hospitals/pharmacies about manufacturer patient-assistance programs</li>
+      </ul>
+      <div class="contact-row"><span class="name">PAAD Hotline</span><span class="num"><a href="tel:1-800-792-9745">1-800-792-9745</a></span><span class="desc">aging.nj.gov</span></div>
+      <div class="contact-row"><span class="name">NeedyMeds Rx</span><span class="num"><a href="tel:1-800-503-6897">1-800-503-6897</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Special Children&rsquo;s Services <span class="tag">Your kid</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>NJ FamilyCare&rsquo;s <strong>Special Services</strong> for children with special health care needs (autism/Asperger&rsquo;s)</li>
+        <li><strong>No-cost</strong> care coordination &amp; case management to reach specialists and therapies</li>
+        <li>Kids diagnosed with autism are added to a <strong>state registry</strong> that unlocks county-based services</li>
+        <li>Coordinate with <a href="#disability">PerformCare &amp; DDD</a> so nothing falls through the cracks</li>
+      </ul>
+      <div class="contact-row"><span class="name">NJ FamilyCare</span><span class="num"><a href="https://njfamilycare.dhs.state.nj.us">njfamilycare.dhs.state.nj.us</a></span></div>
+      <div class="contact-row"><span class="name">PerformCare</span><span class="num"><a href="tel:877-652-7624">877-652-7624</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Mental health &amp; crisis <span class="tag">24/7</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>For your fiancée&rsquo;s <strong>anxiety</strong> &mdash; counseling &amp; treatment are covered by NJ FamilyCare/Medicaid</li>
+        <li><strong>988</strong> Suicide &amp; Crisis Lifeline &mdash; call or text, free, 24/7</li>
+        <li><strong>NJ Mental Health Cares</strong> &mdash; finds local therapists &amp; clinics, sliding-scale</li>
+        <li>ReachNJ.gov lists county mental health resources</li>
+      </ul>
+      <div class="contact-row"><span class="name">Crisis Line</span><span class="num"><a href="tel:988">988</a></span><span class="desc">call or text</span></div>
+      <div class="contact-row"><span class="name">NJ Mental Health Cares</span><span class="num"><a href="tel:1-866-202-4357">1-866-202-HELP</a></span><span class="desc">24/7</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- DISABILITY SERVICES -->
+<h2 class="section-title" id="disability">Disability &amp; developmental services</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">DDD — Fiancée <span class="tag">Autism</span></div>
+    <div class="panel-body">
+      <p><strong>Supports Program</strong> (age 21+, at home, no wait):</p>
+      <ul>
+        <li>Employment/day services</li>
+        <li>Respite care</li>
+        <li>Behavioral supports</li>
+        <li>Assistive technology</li>
+        <li>Transportation</li>
+        <li>Self-directed services</li>
+      </ul>
+      <p>Must be Medicaid-eligible &amp; NJ resident. Apply <strong>now</strong> — process takes time.</p>
+      <div class="contact-row"><span class="name">DDD Phone</span><span class="num"><a href="tel:609-633-1482">609-633-1482</a></span></div>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://nj.gov/humanservices/ddd/individuals/apply-for-services/">nj.gov/ddd/apply</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Your Kid <span class="tag">Asperger's</span></div>
+    <div class="panel-body">
+      <p>If diagnosed before 22, they may already be in the system.</p>
+      <ul>
+        <li>Ages 0-21: <strong>Children's System of Care</strong> (PerformCare)</li>
+        <li>Ages 18-21: Transition planning to DDD</li>
+        <li>Even if "seemingly normal," may qualify for accommodations &amp; therapy</li>
+      </ul>
+      <div class="contact-row"><span class="name">PerformCare</span><span class="num"><a href="tel:877-652-7624">877-652-7624</a></span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://performcarenj.org">performcarenj.org</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Division of Vocational Rehab</div>
+    <div class="panel-body">
+      <p>For adults with disabilities attempting to work. Services include counseling, job training, out-of-school youth programs.</p>
+      <div class="contact-row"><span class="name">DVRS</span><span class="num"><a href="tel:609-292-5987">609-292-5987</a></span><span class="desc">State office</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Autism-specific resources <span class="tag">Family support</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Autism New Jersey</strong> &mdash; information, family navigation, training &amp; advocacy</li>
+        <li><strong>NJ Autism Center of Excellence (NJ ACE)</strong> &mdash; free resource directory &amp; family help</li>
+        <li><strong>Autism Family Services of NJ (AFSNJ)</strong> &mdash; 50+ programs: after-school, recreation, respite, family support</li>
+        <li><strong>Division of Disabilities Services</strong> &mdash; state info line for autism &amp; disability programs</li>
+      </ul>
+      <div class="contact-row"><span class="name">Disabilities Services</span><span class="num"><a href="tel:1-888-285-3036">1-888-285-3036</a></span></div>
+      <div class="contact-row"><span class="name">Autism NJ / NJ ACE</span><span class="num"><a href="https://autismnj.org">autismnj.org</a> &middot; <a href="https://njace.us/resources/">njace.us</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHILD CARE & SCHOOL SUPPORT -->
+<h2 class="section-title" id="childcare">Child care &amp; school support</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Child Care Assistance <span class="tag">CCAP</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Subsidized child care for families that work, job-train or go to school</li>
+        <li>Sliding fee based on income &mdash; often little or no cost for low-income families</li>
+        <li>Same <strong>MyNJHelps</strong> application as SNAP &amp; WFNJ</li>
+        <li>Registration opens in waves &mdash; very-low-income families first</li>
+      </ul>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://www.childcarenj.gov">childcarenj.gov</a></span></div>
+      <div class="contact-row"><span class="name">Subsidy Team</span><span class="num"><a href="tel:609-989-8035">609-989-8035</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">School support &mdash; Child Study Team <span class="tag">IEP</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Winslow Township Schools&rsquo; <strong>Child Study Team</strong> evaluates kids &amp; writes an <strong>IEP</strong></li>
+        <li>If your child isn&rsquo;t getting special-ed services, <strong>request an evaluation in writing</strong></li>
+        <li><strong>I&amp;RS</strong> (Intervention &amp; Referral Services) provides classroom accommodations</li>
+        <li>Free appropriate public education is guaranteed <strong>through age 21</strong></li>
+      </ul>
+      <div class="contact-row"><span class="name">Winslow Twp Schools</span><span class="num"><a href="https://www.winslow-schools.com">winslow-schools.com</a></span><span class="desc">ask for the CST</span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">School meals &amp; WIC <span class="tag">Nutrition</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Free/reduced school meals</strong> &mdash; apply through the school district; being on SNAP often auto-qualifies</li>
+        <li><strong>WIC</strong> &mdash; free healthy food, nutrition counseling &amp; breastfeeding support for pregnant women and <strong>children under 5</strong></li>
+        <li>WIC also gives referrals to health &amp; social services</li>
+      </ul>
+      <div class="contact-row"><span class="name">NJ WIC</span><span class="num"><a href="tel:1-800-328-3838">1-800-328-3838</a></span><span class="desc">nj.gov/health/fhs/wic</span></div>
+      <div class="contact-row"><span class="name">Camden County</span><span class="num"><a href="tel:856-225-8800">856-225-8800</a></span><span class="desc">Board of Social Services</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- MARRIAGE WARNING -->
+<h2 class="section-title" id="marriage">The marriage question</h2>
+<div class="alert-box">
+  <strong>Be very careful before marrying for benefits.</strong> Marriage <em>can</em> raise household income limits for SNAP, Medicaid, LIHEAP, USF — but if either of you is on <strong>SSI</strong>, marriage can reduce or eliminate that benefit because spousal income counts. Married couples where both are disabled often do better than two individuals, but it depends on your specific income mix. <strong>Before deciding:</strong> call a benefits counselor through <strong>211</strong> or use the <a href="https://dcaid.dca.nj.gov">DCAid screening tool</a> to model "what if I got married" scenarios.
+</div>
+
+<!-- HOUSING, RENT & LEGAL HELP -->
+<h2 class="section-title" id="housing">Housing, rent &amp; legal help</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Homelessness Prevention <span class="tag">HPP</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Up to <strong>3 months of past-due rent</strong> (and related costs) if you face eviction from a temporary hardship</li>
+        <li>Can also help with mortgage/utility arrears in some cases</li>
+        <li>Administered locally &mdash; in Camden County through <strong>CCCOEO</strong></li>
+        <li>Free <a href="https://evictionguide.dca.nj.gov">NJ eviction guide</a> explains your rights step by step</li>
+      </ul>
+      <div class="contact-row"><span class="name">CCCOEO (Camden)</span><span class="num"><a href="tel:856-964-6887">856-964-6887</a></span><span class="desc">cccoeo.org</span></div>
+      <div class="contact-row"><span class="name">Program Info</span><span class="num"><a href="https://www.nj.gov/dca/dhcr/offices/dhcrohp.shtml">nj.gov/dca/homelessness-prevention</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Foreclosure prevention <span class="tag">FMAP</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Free</strong> housing counseling &amp; court foreclosure mediation for homeowners behind on the mortgage</li>
+        <li>NJHMFA&rsquo;s <strong>Foreclosure Mediation Assistance Program</strong></li>
+        <li>Counselors help you explore loan modification, repayment &amp; other options</li>
+        <li>Act <em>early</em> &mdash; contact a counselor before you fall far behind</li>
+      </ul>
+      <div class="contact-row"><span class="name">HUD Counselor Finder</span><span class="num"><a href="tel:1-800-569-4287">1-800-569-4287</a></span></div>
+      <div class="contact-row"><span class="name">NJHMFA</span><span class="num"><a href="https://www.nj.gov/dca/hmfa/homeowners/foreclosure-prevention/">nj.gov/dca/hmfa/foreclosure</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Legal Services of New Jersey <span class="tag">LSNJ &mdash; free</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Free legal help for low-income residents: <strong>eviction, benefits denials &amp; appeals</strong>, family law, consumer/debt</li>
+        <li>Use them to <strong>appeal a denied SNAP / Medicaid / SSI</strong> or fight an eviction</li>
+        <li>Hotline gives advice, information &amp; referrals; apply online for representation</li>
+        <li>If you have a court date in the next 5&ndash;7 days, <strong>call</strong> rather than apply online</li>
+      </ul>
+      <div class="contact-row"><span class="name">LSNJLAW Hotline</span><span class="num"><a href="tel:1-888-576-5529">1-888-LSNJ-LAW</a></span><span class="desc">Mon-Fri 8-5:30</span></div>
+      <div class="contact-row"><span class="name">Apply Online</span><span class="num"><a href="https://lsnjlawhotline.org/">lsnjlawhotline.org</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCAL -->
+<h2 class="section-title" id="local">Local &amp; county</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Camden County</div>
+    <div class="panel-body">
+      <div class="contact-row"><span class="name">Board of Social Services</span><span class="num"><a href="tel:856-225-8800">856-225-8800</a></span><span class="desc">SNAP, Medicaid, child care</span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://camdencounty.com/service/social-services">camdencounty.com/social-services</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Winslow Township</div>
+    <div class="panel-body">
+      <div class="contact-row"><span class="name">Township Hall</span><span class="num"><a href="tel:609-567-0700">609-567-0700</a></span><span class="desc">Local hardship programs</span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://winslowtownship.com">winslowtownship.com</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJ BPU &amp; Complaints</div>
+    <div class="panel-body">
+      <div class="contact-row"><span class="name">BPU Consumer Complaints</span><span class="num"><a href="tel:1-800-624-0241">1-800-624-0241</a></span></div>
+      <div class="contact-row"><span class="name">BPU Programs</span><span class="num"><a href="https://nj.gov/bpu/assistance/programs/">nj.gov/bpu/assistance</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HOME REPAIR & IMPROVEMENT -->
+<h2 class="section-title" id="home-repair">Home repair &amp; improvement</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">USDA Section 504 Home Repair <span class="tag">Federal</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Loans up to <strong>$40,000</strong> at 1% interest (20 years)</li>
+        <li>Grants up to <strong>$10,000</strong> (age 62+, can't afford loan)</li>
+        <li>Loan + grant can combine to <strong>$50,000</strong></li>
+        <li>Very-low-income homeowners in eligible <em>rural</em> areas (parts of Winslow Twp. qualify &mdash; call to check your address)</li>
+        <li>Repairs must fix safety/health hazards or modernize the home</li>
+      </ul>
+      <div class="contact-row"><span class="name">USDA Rural Dev. NJ</span><span class="num"><a href="tel:856-787-7700">856-787-7700</a></span><span class="desc">Mt. Laurel office</span></div>
+      <div class="contact-row"><span class="name">Program Info</span><span class="num"><a href="https://www.rd.usda.gov/programs-services/single-family-housing-programs/single-family-housing-repair-loans-grants">rd.usda.gov</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Camden County Home Improvement Program <span class="tag">CCIA</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>County-funded help for health &amp; safety home repairs</li>
+        <li>Income-eligible, owner-occupied homes</li>
+        <li>Must have lived at the address <strong>1+ year</strong></li>
+        <li>Request an application from the County Rehab Office</li>
+      </ul>
+      <div class="contact-row"><span class="name">Rehab Office</span><span class="num"><a href="tel:856-751-2242">856-751-2242</a></span><span class="desc">Camden County Improvement Authority</span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://www.camdencounty.com/service/community-development/home-improvement-program/">camdencounty.com</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Habitat for Humanity SCNJ <span class="tag">Non-profit</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Serves <strong>Camden County</strong> (Sicklerville/Winslow) &mdash; Habitat of South Central NJ</li>
+        <li><strong>Critical repairs</strong>: roof, HVAC, plumbing, electrical, structural, windows/insulation</li>
+        <li><strong>Aging in Place</strong>: wheelchair ramps, grab bars, fall prevention</li>
+        <li><strong>Home Preservation</strong>: painting, siding, landscaping, exterior repairs</li>
+        <li>Must own your home, be current on mortgage/taxes/insurance, and meet income limits</li>
+      </ul>
+      <div class="contact-row"><span class="name">Repairs Dept</span><span class="num"><a href="tel:856-441-2740">856-441-2740</a></span><span class="desc">repairs@habitatscnj.org</span></div>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://www.habitatscnj.org/services/neighborhood-revitalization/">habitatscnj.org</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Habitat ReStore <span class="tag">Discount supplies</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>New/used furniture, appliances &amp; building materials at a fraction of retail</li>
+        <li>Nearest: <strong>Maple Shade</strong> (530 Rt 38 E) &mdash; open daily 10&ndash;6</li>
+        <li>Also Egg Harbor Twp. &amp; Hamilton locations</li>
+      </ul>
+      <div class="contact-row"><span class="name">Maple Shade ReStore</span><span class="num"><a href="tel:856-439-6717">856-439-6717</a></span></div>
+      <div class="contact-row"><span class="name">Locations</span><span class="num"><a href="https://www.habitatscnj.org/restore/">habitatscnj.org/restore</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Lead Paint Remediation <span class="tag">NJDCA</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Lead Remediation &amp; Abatement Program (LRAP) for low-income households</li>
+        <li>For homes built <strong>before 1978</strong>, especially with a child under 6</li>
+        <li>Apply online via the DCAid portal, open year-round</li>
+      </ul>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://njdca-housing.dynamics365portals.us">DCAid portal</a></span></div>
+      <div class="contact-row"><span class="name">Program Info</span><span class="num"><a href="https://www.nj.gov/dca/dhcr/offices/leadsafe.shtml">nj.gov/dca/leadsafe</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- WEATHERIZATION & ENERGY EFFICIENCY -->
+<h2 class="section-title" id="energy">Weatherization &amp; energy efficiency</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Weatherization Assistance Program <span class="tag">WAP</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Free</strong> insulation, air sealing, heating system repair/replacement</li>
+        <li>For low-income, elderly, and disabled households</li>
+        <li>The same USF/LIHEAP application covers WAP</li>
+        <li>Camden County is served by the Camden Council on Economic Opportunity</li>
+      </ul>
+      <div class="contact-row"><span class="name">CCCOEO (Camden)</span><span class="num"><a href="tel:856-910-8816">856-910-8816</a></span><span class="desc">WAP agency</span></div>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://energyassistance.nj.gov">energyassistance.nj.gov</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Comfort Partners <span class="tag">ACE / NJ Clean Energy</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Free</strong> home energy assessment + no-cost energy-saving upgrades</li>
+        <li>Income-eligible (roughly 225% FPL)</li>
+        <li>Run by Atlantic City Electric with the NJ Clean Energy Program</li>
+      </ul>
+      <div class="contact-row"><span class="name">Comfort Partners</span><span class="num"><a href="tel:866-378-4345">866-378-4345</a></span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://cleanenergy.nj.gov/programs/energy-efficiency/comfort-partners">cleanenergy.nj.gov</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJ Community Solar <span class="tag">BPU</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Subscribe <strong>free</strong> to a local solar farm &mdash; credits show up on your ACE electric bill</li>
+        <li>Low- &amp; moderate-income subscribers get a <strong>guaranteed discount</strong> (typically 20%+) on the solar credits</li>
+        <li><strong>No panels on your roof, no credit check</strong>, cancel anytime</li>
+        <li>Ask 211 or ACE about LMI-eligible projects serving <strong>08081</strong></li>
+      </ul>
+      <div class="contact-row"><span class="name">Enroll / Info</span><span class="num"><a href="https://cleanenergy.nj.gov/programs/solar/community-solar-for-subscribers">cleanenergy.nj.gov/community-solar</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TRANSPORTATION -->
+<h2 class="section-title" id="transportation">Transportation</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">NJ Transit Access Link <span class="tag">Paratransit</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Door-to-door public transit for people with disabilities who can't ride fixed-route buses</li>
+        <li>Your fianc&eacute;e and/or child may qualify &mdash; requires a certification interview</li>
+      </ul>
+      <div class="contact-row"><span class="name">Access Link</span><span class="num"><a href="tel:973-491-4224">973-491-4224</a></span><span class="desc">press 1</span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://www.njtransit.com/accessibility/access-link-ada-paratransit">njtransit.com/access-link</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">NJTIP Travel Training <span class="tag">Free</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Free one-on-one training to ride buses/trains independently</li>
+        <li>For people with disabilities and older adults</li>
+      </ul>
+      <div class="contact-row"><span class="name">NJTIP</span><span class="num"><a href="https://www.nj.gov/humanservices/dds/hottopics/transportation/">nj.gov/dds/transportation</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Car help <span class="tag">Heads-up</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>NJ has <strong>no state &ldquo;free car&rdquo;</strong> program</li>
+        <li>DDD can fund transportation for your fianc&eacute;e (already on your list)</li>
+        <li>National nonprofits like <strong>FreeCharityCars.org</strong> (1-800-Charity Cars) take online applications, but waitlists are long</li>
+      </ul>
+      <div class="contact-row"><span class="name">Free Charity Cars</span><span class="num"><a href="https://www.freecharitycars.org">freecharitycars.org</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOD PANTRIES & FREE MEALS -->
+<h2 class="section-title" id="food-pantries">Food pantries &amp; free meals</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Sicklerville / Winslow pantries <span class="tag">Right nearby</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Community Care Food &amp; Clothing Pantry</strong> &mdash; 238 Sicklerville Rd, Sicklerville 08081 &mdash; food <em>and</em> clothing</li>
+        <li><strong>Food Bank of South Jersey</strong> mobile distribution &mdash; Winslow Twp School #3, 131 Sicklerville Rd (2nd Saturday, 9&ndash;11am)</li>
+        <li>Hours &amp; locations change &mdash; always <strong>call 211</strong> or check ahead</li>
+        <li>Bring ID and proof of address for the household</li>
+      </ul>
+      <div class="contact-row"><span class="name">Community Care</span><span class="num"><a href="tel:856-449-9744">856-449-9744</a></span><span class="desc">foodpantrynj.org</span></div>
+      <div class="contact-row"><span class="name">Find food near you</span><span class="num"><a href="tel:211">211</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Food Bank of South Jersey <span class="tag">Regional</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Runs pantries &amp; meal programs across Camden County</li>
+        <li><strong>Zip-code locator</strong> finds the pantry closest to 08081 with current hours</li>
+        <li>Home-delivered groceries for homebound seniors &amp; people with disabilities</li>
+        <li>Also offers SNAP outreach to help you keep benefits</li>
+      </ul>
+      <div class="contact-row"><span class="name">Food Bank SJ</span><span class="num"><a href="tel:856-662-4884">856-662-4884</a></span></div>
+      <div class="contact-row"><span class="name">Zip locator</span><span class="num"><a href="https://foodbanksj.org/zip-code-locator/">foodbanksj.org</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- EMPLOYMENT & JOB TRAINING -->
+<h2 class="section-title" id="employment">Employment &amp; job training</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">Camden County One-Stop Career Center <span class="tag">Free</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Free</strong> job search help, career counseling, resume &amp; interview coaching</li>
+        <li>Job <strong>training</strong>, certification funding &amp; Jersey Job Club workshops</li>
+        <li>Services for veterans, youth &amp; people returning to work</li>
+        <li>101 Woodcrest Rd, Suite 127, Cherry Hill, NJ 08003</li>
+      </ul>
+      <div class="contact-row"><span class="name">One-Stop Career Ctr</span><span class="num"><a href="tel:856-549-0600">856-549-0600</a></span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://www.camdencounty.com/service/employment/one-stop-career-center/">camdencounty.com/one-stop</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Unemployment &amp; disability work help</div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>Unemployment Insurance</strong> &mdash; if you recently lost a job, file online fast (benefits start when you claim)</li>
+        <li>One-Stop also handles <strong>reemployment</strong> services required with UI</li>
+        <li>If a disability limits work, pair this with <a href="#disability">DVRS</a> job coaching &amp; training</li>
+        <li>Working while on SSI/SSDI is possible &mdash; ask about work incentives &amp; ticket-to-work</li>
+      </ul>
+      <div class="contact-row"><span class="name">File for UI</span><span class="num"><a href="https://www.myunemployment.nj.gov">myunemployment.nj.gov</a></span></div>
+      <div class="contact-row"><span class="name">NJ Career Services</span><span class="num"><a href="https://www.nj.gov/labor/career-services/contact-us/one-stops/">nj.gov/labor/one-stops</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- TAX RELIEF, INTERNET & MORE -->
+<h2 class="section-title" id="more">Tax relief, internet &amp; more</h2>
+<div class="grid">
+  <div class="panel">
+    <div class="panel-head">ANCHOR Property Tax Relief <span class="tag">NJ Treasury</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Homeowners: up to <strong>$1,750</strong> (or $1,250 if income $150k&ndash;$250k)</li>
+        <li>Renters: up to <strong>$700</strong></li>
+        <li>Applies to homeowners OR renters &mdash; one per household</li>
+        <li>2025 application deadline: <strong>Nov 2, 2026</strong></li>
+      </ul>
+      <div class="contact-row"><span class="name">ANCHOR Hotline</span><span class="num"><a href="tel:1-888-238-1233">1-888-238-1233</a></span></div>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://www.nj.gov/treasury/taxation/anchor/">nj.gov/anchor</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Senior Freeze (PTR) <span class="tag">If disabled</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Reimburses property-tax increases for people 65+ <strong>or receiving SSDI</strong></li>
+        <li>Income limits apply</li>
+      </ul>
+      <div class="contact-row"><span class="name">PTR Hotline</span><span class="num"><a href="tel:1-800-882-6597">1-800-882-6597</a></span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://www.nj.gov/treasury/taxation/ptr/">nj.gov/treasury/taxation/ptr</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Comcast Internet Essentials <span class="tag">$14.95/mo</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Low-cost home internet for SNAP, Medicaid, SSI, LIHEAP, or public-housing households</li>
+        <li>~$14.95/mo (75 Mbps) &mdash; no credit check</li>
+        <li>Free basic computer training offered</li>
+      </ul>
+      <div class="contact-row"><span class="name">Internet Essentials</span><span class="num"><a href="tel:1-855-846-8376">1-855-846-8376</a></span></div>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://www.internetessentials.com">internetessentials.com</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Catholic Charities South Jersey <span class="tag">Non-profit</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>One-time emergency help: rent, utilities, food, clothing</li>
+        <li>Serves Camden County regardless of faith</li>
+      </ul>
+      <div class="contact-row"><span class="name">Camden County</span><span class="num"><a href="tel:856-342-4100">856-342-4100</a></span></div>
+      <div class="contact-row"><span class="name">Website</span><span class="num"><a href="https://catholiccharitiessouthjersey.org">catholiccharitiessouthjersey.org</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">Stay NJ Property Tax Relief <span class="tag">65+ or disabled</span></div>
+    <div class="panel-body">
+      <ul>
+        <li>Cuts your property tax by up to <strong>50%</strong> (2025 benefit capped at <strong>$6,500</strong>)</li>
+        <li>For owners <strong>65+ or under 65 receiving Social Security Disability</strong>, income under $500,000</li>
+        <li>Must have owned &amp; lived in the home all 12 months of the tax year</li>
+        <li><strong>One combined form (PAS-1)</strong> applies you for ANCHOR, Senior Freeze &amp; Stay NJ at once</li>
+        <li>2025 deadline: <strong>Nov 2, 2026</strong></li>
+      </ul>
+      <div class="contact-row"><span class="name">Property Tax Relief</span><span class="num"><a href="tel:1-888-238-1233">1-888-238-1233</a></span></div>
+      <div class="contact-row"><span class="name">Apply</span><span class="num"><a href="https://www.nj.gov/treasury/taxation/staynj/">nj.gov/staynj</a></span></div>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="panel-head">EITC, Child Tax Credit &amp; free filing <span class="tag">Money back</span></div>
+    <div class="panel-body">
+      <ul>
+        <li><strong>NJ Earned Income Tax Credit</strong> &mdash; refundable credit if you work; one of the most generous state matches (you must qualify for the federal EITC)</li>
+        <li><strong>Child Tax Credit</strong> &mdash; federal credit per child, partly refundable; NJ adds a credit for young children</li>
+        <li>Refunds are <strong>real money back</strong> &mdash; many families miss them</li>
+        <li><strong>Free tax prep (VITA)</strong> if household income is under ~$69,000 &mdash; IRS-certified volunteers file it free</li>
+      </ul>
+      <div class="contact-row"><span class="name">Free Filing</span><span class="num"><a href="https://www.nj.gov/treasury/taxation/freefiling/">nj.gov/freefiling</a></span></div>
+      <div class="contact-row"><span class="name">NJ EITC Info</span><span class="num"><a href="https://www.nj.gov/treasury/taxation/eitc/knoweitc.shtml">nj.gov/treasury/eitc</a></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PHONE CHEAT SHEET -->
+<h2 class="section-title" id="phones">Phone number cheat sheet</h2>
+<div class="panel">
+  <div class="panel-body">
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0.25rem;">
+      <div class="contact-row"><span class="name">NJ 211 (all services)</span><span class="num">211 / 800-510-3102</span></div>
+      <div class="contact-row"><span class="name">Atlantic City Electric</span><span class="num">800-642-3780</span></div>
+      <div class="contact-row"><span class="name">NJ American Water</span><span class="num">1-800-272-1325</span></div>
+      <div class="contact-row"><span class="name">SHARES (grants)</span><span class="num">866-657-4273</span></div>
+      <div class="contact-row"><span class="name">SHARES (H2O water)</span><span class="num">877-652-9426</span></div>
+      <div class="contact-row"><span class="name">Single Stop (ACE screener)</span><span class="num">app.singlestop.org</span></div>
+      <div class="contact-row"><span class="name">PAGE Program</span><span class="num">855-465-8783</span></div>
+      <div class="contact-row"><span class="name">DDD (disabilities)</span><span class="num">609-633-1482</span></div>
+      <div class="contact-row"><span class="name">PerformCare (kids)</span><span class="num">877-652-7624</span></div>
+      <div class="contact-row"><span class="name">Camden County SS</span><span class="num">856-225-8800</span></div>
+      <div class="contact-row"><span class="name">Winslow Township</span><span class="num">609-567-0700</span></div>
+      <div class="contact-row"><span class="name">BPU Complaints</span><span class="num">1-800-624-0241</span></div>
+      <div class="contact-row"><span class="name">Lifeline (free phone)</span><span class="num">1-800-792-9745</span></div>
+      <div class="contact-row"><span class="name">CCCOEO (weatherization)</span><span class="num">856-910-8816</span></div>
+      <div class="contact-row"><span class="name">Comfort Partners</span><span class="num">866-378-4345</span></div>
+      <div class="contact-row"><span class="name">CCIA Home Improvement</span><span class="num">856-751-2242</span></div>
+      <div class="contact-row"><span class="name">USDA Rural Dev. NJ</span><span class="num">856-787-7700</span></div>
+      <div class="contact-row"><span class="name">ANCHOR Hotline</span><span class="num">1-888-238-1233</span></div>
+      <div class="contact-row"><span class="name">Senior Freeze (PTR)</span><span class="num">1-800-882-6597</span></div>
+      <div class="contact-row"><span class="name">Access Link (paratransit)</span><span class="num">973-491-4224</span></div>
+      <div class="contact-row"><span class="name">Internet Essentials</span><span class="num">1-855-846-8376</span></div>
+      <div class="contact-row"><span class="name">Catholic Charities SJ</span><span class="num">856-342-4100</span></div>
+      <div class="contact-row"><span class="name">Habitat SCNJ Repairs</span><span class="num">856-441-2740</span></div>
+      <div class="contact-row"><span class="name">Social Security (SSI/SSDI)</span><span class="num">1-800-772-1213</span></div>
+      <div class="contact-row"><span class="name">PAAD (prescriptions)</span><span class="num">1-800-792-9745</span></div>
+      <div class="contact-row"><span class="name">Charity Care (NJDOH)</span><span class="num">1-866-588-5696</span></div>
+      <div class="contact-row"><span class="name">988 Crisis Lifeline</span><span class="num">988</span></div>
+      <div class="contact-row"><span class="name">NJ Mental Health Cares</span><span class="num">1-866-202-4357</span></div>
+      <div class="contact-row"><span class="name">NeedyMeds (Rx discounts)</span><span class="num">1-800-503-6897</span></div>
+      <div class="contact-row"><span class="name">Disabilities Services (DDS)</span><span class="num">1-888-285-3036</span></div>
+      <div class="contact-row"><span class="name">Child care subsidy (CCAP)</span><span class="num">609-989-8035</span></div>
+      <div class="contact-row"><span class="name">LSNJLAW (free legal)</span><span class="num">1-888-576-5529</span></div>
+      <div class="contact-row"><span class="name">CCCOEO (rent/eviction help)</span><span class="num">856-964-6887</span></div>
+      <div class="contact-row"><span class="name">HUD foreclosure counselor</span><span class="num">1-800-569-4287</span></div>
+      <div class="contact-row"><span class="name">Community Care food pantry</span><span class="num">856-449-9744</span></div>
+      <div class="contact-row"><span class="name">Food Bank of South Jersey</span><span class="num">856-662-4884</span></div>
+      <div class="contact-row"><span class="name">Camden One-Stop Career Ctr</span><span class="num">856-549-0600</span></div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+<p class="footer">Print-friendly page &middot; 10/07/2026 &middot; Sicklerville, NJ 08081 &middot; Created by 211 NJ Community Programs Worker</p>
+
+</body>
+</html>
